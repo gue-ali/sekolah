@@ -1,0 +1,9 @@
+<odoo>
+    <data>
+      <!-- Add you code here -->
+      <!-- This Menu Item Must have a parent -->
+      <menuitem id="akademik_menu_categ" name="akademik" parent="sekolah.sekolah_top_menu" sequence="90"/>
+      <!-- This Menu Item must have a parent and an action -->
+      <menuitem id="absensi_menu_act" name="absensi" parent="akademik_menu_categ" action="akademik_absensi_action" sequence="10"/>
+    </data>
+</odoo>

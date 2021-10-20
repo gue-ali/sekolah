@@ -27,12 +27,8 @@
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
-<<<<<<< Updated upstream
-=======
         'views/absensi.xml',
-        'views/menu.xml',
->>>>>>> Stashed changes
-        
+        'views/menu.xml',        
     ],
     # only loaded in demonstration mode
     'demo': [

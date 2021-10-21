@@ -7,7 +7,7 @@
       <field name="arch" type="xml">
         <tree>
           <!-- Add your fields here -->
-          <field name="name"/>
+          <field name="user_guru"/>
           <field name="tanggal"/>
           <field name="mata_pelajaran"/>
         </tree>
@@ -22,18 +22,31 @@
           <sheet>
             <group>
               <!-- Add your fields here -->
-              <field name="name"/>
+              <field name="user_guru" force_save='1'/>
               <field name="tanggal"/>
               <field name="mata_pelajaran"/>
               <field name="ruang_kelas"/>
             </group>
+            <!-- <notebook>
+              <page string="Siswa">
+                <field name="siswa_ids" colspan="4">
+                  <tree>
+                    <field name="nis"/>
+                    <field name="name"/>
+                    <field name="nisn"/>
+                    <field name="jns_kelamin"/>
+                    <field name="tgl_lahir"/>
+                  </tree>
+                </field>
+              </page>
+            </notebook> -->
           </sheet>
         </form>
       </field>
     </record>
     <!-- akademik.absensi action window -->
     <record id="akademik_absensi_action" model="ir.actions.act_window">
-      <field name="name">akademik.absensi.action</field>
+      <field name="name">Absensi</field>
       <field name="type">ir.actions.act_window</field>
       <field name="res_model">akademik.absensi</field>
       <field name="view_mode">tree,form</field>

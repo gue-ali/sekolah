@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'board', 'hr', 'web', 'website', 'sekolah'],
 
     # always loaded
     'data': [
@@ -28,7 +28,8 @@
         'views/views.xml',
         'views/templates.xml',
         'views/absensi.xml',
-        'views/menu.xml',        
+        'views/mapel.xml',
+        'views/menu.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

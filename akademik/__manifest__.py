@@ -28,7 +28,8 @@
         'views/views.xml',
         'views/templates.xml',
         'views/absensi.xml',
-        'views/menu.xml',        
+        'views/menu.xml',  
+        'views/mapel.xml',       
     ],
     # only loaded in demonstration mode
     'demo': [

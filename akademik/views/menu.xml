@@ -5,5 +5,6 @@
       <menuitem id="akademik_menu_categ" name="akademik" parent="sekolah.sekolah_top_menu" sequence="90"/>
       <!-- This Menu Item must have a parent and an action -->
       <menuitem id="absensi_menu_act" name="absensi" parent="akademik_menu_categ" action="akademik_absensi_action" sequence="10"/>
+      <!-- <menuitem id="mapel_menu_act" name="Mata Pelajaran" parent="akademik_menu_categ" action="akademik_mapel_action" sequence="20"/> -->
     </data>
 </odoo>

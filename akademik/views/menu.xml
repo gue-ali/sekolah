@@ -2,9 +2,9 @@
     <data>
       <!-- Add you code here -->
       <!-- This Menu Item Must have a parent -->
-      <menuitem id="akademik_menu_categ" name="akademik" parent="sekolah.sekolah_top_menu" sequence="90"/>
+      <menuitem id="akademik_menu_categ" name="Akademik" parent="sekolah.sekolah_top_menu" sequence="90"/>
       <!-- This Menu Item must have a parent and an action -->
-      <menuitem id="absensi_menu_act" name="absensi" parent="akademik_menu_categ" action="akademik_absensi_action" sequence="10"/>
+      <menuitem id="absensi_menu_act" name="Absensi" parent="akademik_menu_categ" action="akademik_absensi_action" sequence="10"/>
       <menuitem id="akademik_mapel_act" name="Mapel" parent="akademik_menu_categ" action="akademik_mapel_action" sequence="20"/>
     </data>
 </odoo>

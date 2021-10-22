@@ -1,38 +1,50 @@
-  <data>
-    <!-- Add you code here -->
-    <!-- cdn.mapel tree view -->
-    <record id="cdn_mapel_view_tree" model="ir.ui.view">
-      <field name="name">cdn.mapel.view.tree</field>
-      <field name="model">cdn.mapel</field>
-      <field name="arch" type="xml">
-        <tree>
-          <!-- Add your fields here -->
-          <field name="mapel"/>
-        </tree>
-      </field>
-    </record>
-    <!-- cdn.mapel form view -->
-    <record id="cdn_mapel_view_form" model="ir.ui.view">
-      <field name="name">cdn.mapel.view.form</field>
-      <field name="model">cdn.mapel</field>
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+      <!-- Add you code here -->
+      <!-- akademik.mapel tree view -->
+      <record id="akademik_mapel_view_tree" model="ir.ui.view">
+        <field name="name">akademik.mapel.view.tree</field>
+        <field name="model">akademik.mapel</field>
+        <field name="arch" type="xml">
+          <tree>
+            <!-- Add your fields here -->
+            <field name="name" />
+            <field name="keterangan" />
+            <field name="tahunajaran_id" />
+            <field name="jenjang"/>
+            <field name="tingkat"/>
+            <field name="pengajar_id" />
+          </tree>
+        </field>
+      </record>
+
+    <!-- akademik.mapel form view -->
+    <record id="akademik_mapel_view_form" model="ir.ui.view">
+      <field name="name">akademik.mapel.view.form</field>
+      <field name="model">akademik.mapel</field>
       <field name="arch" type="xml">
         <form string="">
           <sheet>
             <group>
               <!-- Add your fields here -->
-              <field name="mapel"/>
+              <field name="name" />
+              <field name="keterangan" />
+              <field name="tahunajaran_id" />
+              <field name="jenjang"/>
+              <field name="tingkat"/>
+              <field name="pengajar_id" />
             </group>
           </sheet>
         </form>
       </field>
     </record>
-    <!-- cdn.mapel action window -->
-    <record id="cdn_mapel_action" model="ir.actions.act_window">
-      <field name="name">Mapel</field>
+    <!-- akademik.mapel action window -->
+    <record id="akademik_mapel_action" model="ir.actions.act_window">
+      <field name="name">akademik.mapel.action</field>
       <field name="type">ir.actions.act_window</field>
-      <field name="res_model">cdn.mapel</field>
+      <field name="res_model">akademik.mapel</field>
       <field name="view_mode">tree,form</field>
-      <!-- <field name="view_type">form</field> -->
       <field name="help" type="html">
         <p class="oe_view_nocontent_create">
           <!-- Add Text Here -->
@@ -41,4 +53,5 @@
         </p>
       </field>
     </record>
-  </data>
+    </data>
+</odoo>

@@ -6,5 +6,6 @@
       <!-- This Menu Item must have a parent and an action -->
       <menuitem id="absensi_menu_act" name="Absensi" parent="akademik_menu_categ" action="akademik_absensi_action" sequence="10"/>
       <menuitem id="akademik_mapel_act" name="Mapel" parent="akademik_menu_categ" action="akademik_mapel_action" sequence="20"/>
+      <menuitem id="akademik_kehadiran_act" name="Kehadiran" parent="akademik_menu_categ" action="akademik_kehadiran_action" sequence="30"/>
     </data>
 </odoo>

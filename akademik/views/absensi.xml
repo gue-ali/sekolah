@@ -31,8 +31,8 @@
               <page name="daftar_hadir" string="Daftar Hadir">
                 <field name="absen_ids">
                   <tree string="" create="0" editable="bottom">
-                    <field name="name"  readonly="1"/>
-                    <field name="nis"  readonly="1">
+                    <field name="name" readonly="1" force_save='1'/>
+                    <field name="nis" readonly="1" force_save='1'/>
                     <field name="absen"/>
                     <field name="keterangan"/>
                   </tree>

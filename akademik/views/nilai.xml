@@ -12,6 +12,7 @@
                         <field name="user_guru"/>
                         <field name="ruang_kelas"/>
                         <field name="mata_pelajaran"/>
+                        <field name="semester"/>
                     </tree>
                 </field>
             </record>
@@ -27,13 +28,19 @@
                                 <field name="user_guru"/>
                                 <field name="mata_pelajaran"/>
                                 <field name="ruang_kelas"/>
+                                <field name="semester"/>
                             </group>
                             <notebook>
                                 <page string="Siswa" colspan="4" col="4">
                                     <field name="nilai_ids" colspan="4">
                                         <tree editable="bottom">
-                                            <field name="siswa_ids"/>
-                                            <field name="nilai"/>
+                                            <field name="name" readonly="1" force_save='1' />
+                                            <field name="P1"/>
+                                            <field name="P2"/>
+                                            <field name="P3"/>
+                                            <field name="P4"/>
+                                            <field name="P5"/>
+                                            <field name="P6"/>
                                         </tree>
                                     </field>
                                 </page>
@@ -49,8 +56,13 @@
                 <field name="arch" type="xml">
                     <tree>
                         <!-- Add your fields here -->
-                        <field name="siswa_ids"/>
-                        <field name="nilai"/>
+                        <field name="name" readonly="1" force_save='1'/>
+                        <field name="P1"/>
+                        <field name="P2"/>
+                        <field name="P3"/>
+                        <field name="P4"/>
+                        <field name="P5"/>
+                        <field name="P6"/>
                     </tree>
                 </field>
             </record>
@@ -64,8 +76,13 @@
                         <sheet>
                             <group>
                                 <!-- Add your fields here -->
-                                <field name="siswa_ids"/>
-                                <field name="nilai"/>
+                                <field name="name" readonly="1" force_save='1'/>
+                                <field name="P1"/>
+                                <field name="P2"/>
+                                <field name="P3"/>
+                                <field name="P4"/>
+                                <field name="P5"/>
+                                <field name="P6"/>
                             </group>
                         </sheet>
                     </form>

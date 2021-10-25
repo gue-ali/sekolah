@@ -5,37 +5,34 @@ class absensi(models.Model):
     _name           = 'akademik.absensi'
     _description    = 'Absensi'
     _rec_name       = 'user_guru'
-
-    user_guru       = fields.Many2one(comodel_name='hr.employee', string='Nama Guru', store=True)
-    # siswa_ids       = fields.Many2many('cdn.siswa','ruang_kelas_siswa_rel','ruang_kelas_id','siswa_id', string='Daftar Siswa', domain=[('active', '=', True)])
-    # petugas_id          = fields.Many2one(comodel_name='hr.employee', string='Petugas Penerima', readonly=True)
-    tanggal       = fields.Datetime(string='Waktu', required=False, readonly=False, select=True, default=lambda self: fields.datetime.now())
-    # mata_pelajaran = fields.Text(string='Mata Pelajaran')
-    ruang_kelas     = fields.Many2one(comodel_name='cdn.ruang_kelas', string='Ruang kelas')
-    mata_pelajaran  = fields.Selection(string='Status Pernikahan', selection=[('single', 'Belum Kawin'), ('married', 'Menikah'),('divorced', 'Cerai Hidup'),('cerai', 'Cerai Mati'),], related='user_guru.marital')
-    # jenjang             = fields.Selection(selection=[('sd','SD/MI'),('smp','SMP/MTS'),('sma','SMA/MA')],  string="Jenjang", related='name.jenjang', help="")
-    # siswa_ids       = fields.Many2many(string='Siswa', related='ruang_kelas.siswa_ids')
-    # siswa_ids       = fields.Many2many(string='Siswa', related='ruang_kelas.siswa_ids')
-    absen_ids        = fields.Many2many('akademik.kehadiran', string='Absen')
     
+    name            = fields.Datetime(string='Waktu', required=True, readonly=False, select=True, default=lambda self: fields.datetime.now())
+    user_guru       = fields.Many2one(comodel_name='hr.employee', string='Nama Guru', store=True)
+    ruang_kelas     = fields.Many2one(comodel_name='cdn.ruang_kelas', string='Ruang kelas',  required=True)
+    mata_pelajaran  = fields.Selection(string='Status Pernikahan', selection=[('single', 'Belum Kawin'), ('married', 'Menikah'),('divorced', 'Cerai Hidup'),('cerai', 'Cerai Mati'),], related='user_guru.marital')
+    absen_ids       = fields.One2many(comodel_name='akademik.kehadiran', inverse_name='absen_id', string='Absen')
+    
+    @api.onchange('ruang_kelas')
+    def onchange_ruang_kelas(self):
+        if self.ruang_kelas:
+            for rec in self:
+                anggota = [(5,0,0)]
+                #self.absensi_lines = [(5,0,0)]
+                for x in self.ruang_kelas.siswa_ids:
+                    val = {
+                        'name': x.id,
+                        'absen' : 'hadir'
+                    }
+                    anggota.append((0,0,val))
+                rec.absen_ids = anggota
 
 
 class kehadiran(models.Model):
     _name           = 'akademik.kehadiran'
     _description    = 'Kehadiran'
 
-    absen_id        = fields.Text(string='Kode Absen')
-    siswa_ids       = fields.Many2one(comodel_name='cdn.siswa', string='Siswa')
-    absen           = fields.Selection(string='Kehadiran', selection=[('hadir', 'Hadir'), ('sakit', 'Sakit'),])
-
-
-    @api.model
-    def create(self, vals):
-        # cek = self.env['res.users'].search([('id', '=', self.env.user.id)])
-        # # print('uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu'. cek)
-        # if cek.user_id:
-        #     vals['user_guru'] = cek.user_id.id
-
-        # set = super(absensi, self).create(vals)
-        self.user_guru = self.env.user.name.id
-        return set
+    absen_id        = fields.Many2one('akademik.absensi', string='Absensi', required=True, ondelete='cascade')
+    name            = fields.Many2one(comodel_name='cdn.siswa', string='Siswa')
+    nis             = fields.Char( string="No Induk Siswa", required=True,  help="", related='name.nis')
+    absen           = fields.Selection(string='Kehadiran', selection=[('hadir', 'Hadir'), ('sakit', 'Sakit'),])    
+    keterangan      = fields.Text(string='Keterangan')

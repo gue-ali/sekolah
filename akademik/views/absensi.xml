@@ -49,11 +49,14 @@
       <field name="name">akademik.kehadiran.view.tree</field>
       <field name="model">akademik.kehadiran</field>
       <field name="arch" type="xml">
-        <tree>
+        <tree duplicate="0" create="false" edit="false" delete="false">
           <!-- Add your fields here -->
+          <field name="tanggal"/>
           <field name="absen_id"/>
           <field name="name"/>
+          <field name="nis"/>
           <field name="absen"/>
+          <field name="keterangan"/>
         </tree>
       </field>
     </record>
@@ -66,8 +69,8 @@
           <sheet>
             <group>
               <!-- Add your fields here -->
-              <field name="name"/>
               <field name="absen_id"/>
+              <field name="name"/>
               <field name="absen"/>
             </group>
           </sheet>

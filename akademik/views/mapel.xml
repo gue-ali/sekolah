@@ -10,11 +10,12 @@
           <tree>
             <!-- Add your fields here -->
             <field name="name" />
-            <field name="keterangan" />
             <field name="tahunajaran_id" />
             <field name="jenjang"/>
             <field name="tingkat"/>
+            <field name="jurusan_id"/>
             <field name="pengajar_id" />
+            <field name="keterangan"/>
           </tree>
         </field>
       </record>
@@ -29,11 +30,12 @@
             <group>
               <!-- Add your fields here -->
               <field name="name" />
-              <field name="keterangan" />
-              <field name="tahunajaran_id" />
-              <field name="jenjang"/>
-              <field name="tingkat"/>
-              <field name="pengajar_id" />
+            <field name="tahunajaran_id" />
+            <field name="jenjang"/>
+            <field name="tingkat"/>
+            <field name="jurusan_id"/>
+            <field name="pengajar_id" />
+            <field name="keterangan"/>
             </group>
           </sheet>
         </form>
@@ -41,7 +43,7 @@
     </record>
     <!-- akademik.mapel action window -->
     <record id="akademik_mapel_action" model="ir.actions.act_window">
-      <field name="name">akademik.mapel.action</field>
+      <field name="name">Mata Pelajaran</field>
       <field name="type">ir.actions.act_window</field>
       <field name="res_model">akademik.mapel</field>
       <field name="view_mode">tree,form</field>

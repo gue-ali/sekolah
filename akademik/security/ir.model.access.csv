@@ -2,3 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_akademik_absensi,akademik.absensi,model_akademik_absensi,base.group_user,1,1,1,1
 access_akademik_mapel,akademik.mapel,model_akademik_mapel,base.group_user,1,1,1,1
 access_akademik_kehadiran,akademik.kehadiran,model_akademik_kehadiran,base.group_user,1,1,1,1
+access_cdn_nilai,cdn.nilai,model_cdn_nilai,base.group_user,1,1,1,1

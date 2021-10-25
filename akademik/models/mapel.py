@@ -16,4 +16,3 @@ class mapel(models.Model):
 
     keterangan          = fields.Char( string="Keterangan",  help="")
 
-    _sql_constraints = [('ruang_kelas_uniq', 'unique(name, tahunajaran_id)', 'Data Mata Pelajaran dan Tahun Pelajaran harus unik !')] 

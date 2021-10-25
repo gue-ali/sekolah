@@ -28,6 +28,7 @@
         'views/views.xml',
         'views/templates.xml',
         'views/absensi.xml',
+        'views/nilai.xml',
         'views/mapel.xml',
         'views/menu.xml',
     ],

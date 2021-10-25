@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+        <data>
+            <!-- Add you code here -->
+            <!-- cdn.nilai tree view -->
+            <record id="cdn_nilai_view_tree" model="ir.ui.view">
+                <field name="name">cdn.nilai.view.tree</field>
+                <field name="model">cdn.nilai</field>
+                <field name="arch" type="xml">
+                    <tree>
+                        <!-- Add your fields here -->
+                        <field name="user_guru"/>
+                        <field name="ruang_kelas"/>
+                        <field name="mata_pelajaran"/>
+                    </tree>
+                </field>
+            </record>
+            <!-- cdn.nilai form view -->
+            <record id="cdn_nilai_view_form" model="ir.ui.view">
+                <field name="name">cdn.nilai.view.form</field>
+                <field name="model">cdn.nilai</field>
+                <field name="arch" type="xml">
+                    <form string="">
+                        <sheet>
+                            <group>
+                                <!-- Add your fields here -->
+                                <field name="user_guru"/>
+                                <field name="mata_pelajaran"/>
+                                <field name="ruang_kelas"/>
+                            </group>
+                            <notebook>
+                                <page string="Siswa" colspan="4" col="4">
+                                    <field name="nilai_ids" colspan="4">
+                                        <tree editable="bottom">
+                                            <field name="siswa_ids"/>
+                                            <field name="nilai"/>
+                                        </tree>
+                                    </field>
+                                </page>
+                            </notebook>
+                        </sheet>
+                    </form>
+                </field>
+            </record>
+            <!-- akademik.nilai tree view -->
+            <record id="akademik_nilai_view_tree" model="ir.ui.view">
+                <field name="name">akademik.nilai.view.tree</field>
+                <field name="model">akademik.nilai</field>
+                <field name="arch" type="xml">
+                    <tree>
+                        <!-- Add your fields here -->
+                        <field name="siswa_ids"/>
+                        <field name="nilai"/>
+                    </tree>
+                </field>
+            </record>
+
+            <!-- akademik.nilai form view -->
+            <record id="akademik_nilai_view_form" model="ir.ui.view">
+                <field name="name">akademik.nilai.view.form</field>
+                <field name="model">akademik.nilai</field>
+                <field name="arch" type="xml">
+                    <form string="">
+                        <sheet>
+                            <group>
+                                <!-- Add your fields here -->
+                                <field name="siswa_ids"/>
+                                <field name="nilai"/>
+                            </group>
+                        </sheet>
+                    </form>
+                </field>
+            </record>
+
+            <!-- cdn.nilai action window -->
+            <record id="cdn_nilai_action" model="ir.actions.act_window">
+                <field name="name">Nilai</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">cdn.nilai</field>
+                <field name="view_mode">tree,form</field>
+                <field name="help" type="html">
+                    <p class="oe_view_nocontent_create">
+                        <!-- Add Text Here -->
+                    </p><p>
+                        <!-- More details about what a user can do with this object will be OK --> 
+                    </p>
+                </field>
+            </record>
+
+            <!-- akademik.nilai action window -->
+            <record id="akademik_nilai_action" model="ir.actions.act_window">
+                <field name="name">Nilai</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">akademik.nilai</field>
+                <field name="view_mode">tree,form</field>
+                <field name="help" type="html">
+                    <p class="oe_view_nocontent_create">
+                        <!-- Add Text Here -->
+                    </p><p>
+                        <!-- More details about what a user can do with this object will be OK --> 
+                    </p>
+                </field>
+            </record>
+    
+        </data>
+</odoo>

@@ -5,8 +5,11 @@
       <menuitem id="akademik_menu_categ" name="Akademik" parent="sekolah.sekolah_top_menu" sequence="90"/>
       <!-- This Menu Item must have a parent and an action -->
       <menuitem id="absensi_menu_act" name="Absensi" parent="akademik_menu_categ" action="akademik_absensi_action" sequence="10"/>
-      <menuitem id="akademik_mapel_act" name="Mapel" parent="akademik_menu_categ" action="akademik_mapel_action" sequence="20"/>
-      <menuitem id="akademik_kehadiran_act" name="Daftar Kehadiran" parent="akademik_menu_categ" action="akademik_kehadiran_action" sequence="30"/>
-      <menuitem id="akademik_nilai_act" name="Nilai" parent="akademik_menu_categ" action="cdn_nilai_action" sequence="40"/>
+      <menuitem id="master_mapel_menu_act" name="Master Mapel" parent="akademik_menu_categ" action="master_mapel_action" sequence="20"/>
+      <menuitem id="akademik_mapel_act" name="Mapel" parent="akademik_menu_categ" action="akademik_mapel_action" sequence="30"/>
+      <menuitem id="akademik_kehadiran_act" name="Daftar Kehadiran" parent="akademik_menu_categ" action="akademik_kehadiran_action" sequence="40"/>
+      <menuitem id="akademik_nilai_act" name="Nilai" parent="akademik_menu_categ" action="cdn_nilai_action" sequence="50"/>
+      
+      
     </data>
 </odoo>

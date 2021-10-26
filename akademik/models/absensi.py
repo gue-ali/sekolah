@@ -31,7 +31,7 @@ class kehadiran(models.Model):
     _description    = 'Kehadiran'
 
     absen_id        = fields.Many2one('akademik.absensi', string='Nama Guru', required=True, ondelete='cascade')
-    tanggal            = fields.Datetime(string='Waktu', related='absen_id.name')
+    tanggal         = fields.Datetime(string='Waktu', related='absen_id.name')
     name            = fields.Many2one(comodel_name='cdn.siswa', string='Siswa')
     nis             = fields.Char(string="No Induk Siswa", required=True,  help="", related='name.nis')
     absen           = fields.Selection(string='Kehadiran', selection=[('hadir', 'Hadir'), ('sakit', 'Sakit'),  ('ijin', 'Ijin'),  ('alpa', 'Alpa'),])    

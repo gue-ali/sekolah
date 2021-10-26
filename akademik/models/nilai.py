@@ -9,12 +9,11 @@ class nilai(models.Model):
 
     #user_guru           = fields.One2many(comodel_name='cdn.guru', inverse_name='guru_id', string='Nama Guru')
     
-    user_guru           = fields.Many2one(comodel_name='hr.employee', string='Nama Guru', store=True)
-    ruang_kelas         = fields.Many2one(comodel_name='cdn.ruang_kelas', string='Ruang kelas')
-    mata_pelajaran      = fields.Selection(string='Status Pernikahan', selection=[('single', 'Belum Kawin'), ('married', 'Menikah'),('divorced', 'Cerai Hidup'),('cerai', 'Cerai Mati'),], related='user_guru.marital')
+    user_guru           = fields.Many2one(comodel_name='cdn.guru', string='Nama Guru', store=True)
+    ruang_kelas         = fields.Many2one(comodel_name='cdn.ruang_kelas', string='Ruang kelas', store=True)
+    mata_pelajaran      = fields.Many2one(comodel_name='master.mapel', string='Mata Pelajaran')
     semester            = fields.Selection(string='Semester', selection=[('Semester 1', 'Semester 1'), ('Semester 2', 'Semester 2'),])
-    
-    nilai_ids = fields.One2many(comodel_name='akademik.nilai', inverse_name='penilaian_id', string='Nilai')
+    nilai_ids           = fields.One2many(comodel_name='akademik.nilai', inverse_name='penilaian_id', string='Nilai')
      
 
     @api.onchange('ruang_kelas')
@@ -25,7 +24,6 @@ class nilai(models.Model):
                 for x in self.ruang_kelas.siswa_ids:
                     val = {
                         'name': x.id,
-                        'nilai': '0'
                     }  
                     anggota.append((0,0,val))
                     rec.nilai_ids = anggota
@@ -44,5 +42,9 @@ class penilaian(models.Model):
     P4              = fields.Integer(string='Nilai 4')
     P5              = fields.Integer(string='Nilai 5')
     P6              = fields.Integer(string='Nilai 6')
+    P7              = fields.Integer(string='Nilai 7')
+    P8              = fields.Integer(string='Nilai 8')
+    rata            = fields.Integer(string='Rata-rata')
+    
 
     

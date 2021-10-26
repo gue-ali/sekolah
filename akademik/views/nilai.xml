@@ -41,6 +41,9 @@
                                             <field name="P4"/>
                                             <field name="P5"/>
                                             <field name="P6"/>
+                                            <field name="P7"/>
+                                            <field name="P8"/>
+                                            <field name="rata"/>
                                         </tree>
                                     </field>
                                 </page>
@@ -63,6 +66,9 @@
                         <field name="P4"/>
                         <field name="P5"/>
                         <field name="P6"/>
+                        <field name="P7"/>
+                        <field name="P8"/>
+                        <field name="rata"/>
                     </tree>
                 </field>
             </record>
@@ -83,6 +89,9 @@
                                 <field name="P4"/>
                                 <field name="P5"/>
                                 <field name="P6"/>
+                                <field name="P7"/>
+                                <field name="P8"/>
+                                <field name="rata"/>
                             </group>
                         </sheet>
                     </form>

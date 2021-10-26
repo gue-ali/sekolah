@@ -30,6 +30,7 @@
         'views/absensi.xml',
         'views/nilai.xml',
         'views/mapel.xml',
+        'views/master_mapel.xml',
         'views/menu.xml',
     ],
     # only loaded in demonstration mode

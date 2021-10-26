@@ -10,7 +10,8 @@
           <tree>
             <!-- Add your fields here -->
             <field name="name" />
-            <field name="tahunajaran_id" />
+            <field name="tahunajaran_id"/>
+            <field name="kelas_id"/>
             <field name="jenjang"/>
             <field name="tingkat"/>
             <field name="jurusan_id"/>
@@ -25,12 +26,16 @@
       <field name="name">akademik.mapel.view.form</field>
       <field name="model">akademik.mapel</field>
       <field name="arch" type="xml">
-        <form string="">
+        <form string="Mata Pelajaran">
           <sheet>
+          <div class="oe_title">
+            <label for="name" class="oe_read_only" string="Mata Pelajaran"/>
+            <h1><field name="name"/></h1>
+          </div>
             <group>
               <!-- Add your fields here -->
-              <field name="name" />
-            <field name="tahunajaran_id" />
+            <field name="tahunajaran_id"/>
+            <field name="kelas_id"/>
             <field name="jenjang"/>
             <field name="tingkat"/>
             <field name="jurusan_id"/>

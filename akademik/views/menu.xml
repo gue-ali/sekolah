@@ -9,7 +9,6 @@
       <menuitem id="akademik_mapel_act" name="Mapel" parent="akademik_menu_categ" action="akademik_mapel_action" sequence="30"/>
       <menuitem id="akademik_kehadiran_act" name="Daftar Kehadiran" parent="akademik_menu_categ" action="akademik_kehadiran_action" sequence="40"/>
       <menuitem id="akademik_nilai_act" name="Nilai" parent="akademik_menu_categ" action="cdn_nilai_action" sequence="50"/>
-      
-      
+      <menuitem id="akademik_web_act" name="Web" parent="akademik_menu_categ" action="akademik_web_action" sequence="60"/>
     </data>
 </odoo>

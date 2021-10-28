@@ -1,0 +1,124 @@
+  <data>
+    <!-- Add you code here -->
+    <record id="absensi_website" model="website.menu">
+      <field name="name">Absensi</field>
+      <field name="url">/absensi</field>
+      <field name="parent_id" ref="website.main_menu"/>
+      <field name="sequence" type="int">50</field>
+    </record>
+    <template id="absensi" name="absensi">
+      <t t-call="website.layout">
+        <div id="wrap">
+          <div class="oe_structure">
+            <div class="container">
+              <form role="form" action="/create/coba" method="POST">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <h2><strong>Data Umum</strong></h2>
+                <div class="s_website_form_rows row s_col_no_bgcolor">
+                  <div class="form-group col-12 s_website_form_field s_website_form_required">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                      <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" >
+                          <span class="s_website_form_label_content">Nama Lengkap</span>
+                          <span class="s_website_form_mark">*</span>
+                      </label>
+                          <div class="col-sm">
+                            <input type="text" class="form-control s_website_form_input" placeholder="Nama Lengkap" name="name" required="required"/>
+                          </div>
+                    </div>
+                  </div>
+                  <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                      <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" >
+                          <span class="s_website_form_label_content">Email</span>
+                          <span class="s_website_form_mark">*</span>
+                      </label>
+                          <div class="col-sm">
+                            <input type="email" class="form-control s_website_form_input" name="email" placeholder="Email" required="required"/>
+                          </div>
+                    </div>
+                  </div>
+                  <!-- <div class="form-group">
+                    <label for="name" class="control-label">nama</label>
+                    <input type="text" class="form-control" name="name" t-att-value="name" id="name" required="required"/>
+                  </div> -->
+                  <!-- <div class="form-group">
+                    <label for="email" class="control-label">email</label>
+                    <input type="email" class="form-control" name="email" t-att-value="email" id="email" required="required"/>
+                  </div> -->
+                  <div class="form-group col-12 s_website_form_submit" data-name="Submit Button">
+                    <div style="width: 200px;" class="s_website_form_label"/>
+                      <button type="submit" class="btn btn-primary pull-left">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </t> 
+    </template>
+    
+
+
+
+
+    <record id="peringatan" model="website.page">
+      <field name="name">terimakasih</field>
+      <field name="type">qweb</field>
+      <field name="url">peringatan</field>
+      <field name="website_published">True</field>
+      <field name="key">akademik.peringatan</field>
+      <field name="arch" type="xml">
+        <t name="terimakasih" t-name="peringatan">
+          <t t-call="website.layout">
+            <div id="wrap">
+              <div class="container">
+                <h1>Terimakasih</h1>
+                <div class="row">
+                  <div class="col-lg-8">
+                    <div class="alert alert-success" role="status">
+                      Data Berhasil Di Simpan
+                    </div>
+                    <a href="/absensi" class="btn btn-primary pull-left">Buat Data lagi</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </t>
+        </t>
+      </field>
+    </record>
+    <!-- <template id="absensi" name="absensi"/>
+        	<t t-call="website.layout">
+            	<div id="absensi">
+                		<section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
+                    	<div class="container">
+                        	<form id="absensi" method="post">
+                            <h2><strong>Data Absensi</strong></h2>
+                            	<div class="s_website_form_rows row s_col_no_bgcolor">
+                                	<div class="form-group col-12 s_website_form_field s_website_form_required">
+                                    	<div class="row s_col_no_resize s_col_no_bgcolor">
+                                        	<label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" >
+                                            	<span class="s_website_form_label_content">Nama Lengkap</span>
+                                            	<span class="s_website_form_mark">*</span>
+                                        	</label>
+                                        	<div class="col-sm">
+                                            	<input type="text" class="form-control s_website_form_input" name="name" required=""/>
+                                        	</div>
+                                    	</div>
+                                	</div>
+                                	<div class="form-group col-12 s_website_form_submit" data-name="Submit Button">
+                                    	<div style="width: 200px;" class="s_website_form_label"/>
+                                    	<a href="#" role="button" class="btn btn-primary btn-lg s_website_form_send">
+                                        	Submit
+                                    	</a>                                    	
+                                	</div>
+                            	</div>
+                        	</form>
+                    	</div>
+                	</section>
+            	</div>
+        	</t>
+    </template> -->
+    <!-- <template id="absensi">
+    	</template> -->
+  </data>

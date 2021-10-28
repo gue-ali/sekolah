@@ -32,6 +32,8 @@
         'views/mapel.xml',
         'views/master_mapel.xml',
         'views/menu.xml',
+        'views/web_absensi.xml',
+        'views/web.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

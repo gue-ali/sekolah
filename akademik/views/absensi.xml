@@ -1,4 +1,5 @@
   <data>
+  
     <!-- Add you code here -->
     <!-- akademik.absensi tree view -->
     <record id="akademik_absensi_view_tree" model="ir.ui.view">
@@ -107,4 +108,5 @@
         </p>
       </field>
     </record>
+    <!-- model.name form view -->
   </data>

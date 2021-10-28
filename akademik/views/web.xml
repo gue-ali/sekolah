@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <!-- Add you code here -->
+    <!-- akademik.web tree view -->
+    <record id="akademik_web_view_tree" model="ir.ui.view">
+      <field name="name">akademik.web.view.tree</field>
+      <field name="model">akademik.web</field>
+      <field name="arch" type="xml">
+        <tree>
+          <!-- Add your fields here -->
+          <field name="name"/>
+          <field name="email"/>
+        </tree>
+      </field>
+    </record>
+    <!-- akademik.web form view -->
+    <record id="akademik_web_view_form" model="ir.ui.view">
+      <field name="name">akademik.web.view.form</field>
+      <field name="model">akademik.web</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <sheet>
+            <group>
+              <!-- Add your fields here -->
+              <field name="name"/>
+              <field name="email"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+    <!-- akademik.web action window -->
+    <record id="akademik_web_action" model="ir.actions.act_window">
+      <field name="name">WEB</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">akademik.web</field>
+      <field name="view_mode">tree,form</field>
+      <!-- <field name="view_type">form</field> -->
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          <!-- Add Text Here -->
+        </p><p>
+          <!-- More details about what a user can do with this object will be OK --> 
+        </p>
+      </field>
+    </record>
+  </data>
+
+</odoo>

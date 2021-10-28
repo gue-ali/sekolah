@@ -5,3 +5,4 @@ access_akademik_kehadiran,akademik.kehadiran,model_akademik_kehadiran,base.group
 access_cdn_nilai,cdn.nilai,model_cdn_nilai,base.group_user,1,1,1,1
 access_akademik_nilai,akademik.nilai,model_akademik_nilai,base.group_user,1,1,1,1
 access_master_mapel,master.mapel,model_master_mapel,base.group_user,1,1,1,1
+access_akademik_web,akademik.web,model_akademik_web,base.group_user,1,1,1,1
